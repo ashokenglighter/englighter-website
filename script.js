@@ -1,1 +1,20 @@
-const menu=document.getElementById('menu');const nav=document.getElementById('navlinks');if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'✕':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));}document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());const form=document.getElementById('contactForm');if(form){form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const recipient='vqbstudydayspvtltd@gmail.com';const subject=encodeURIComponent('Englighter website enquiry: '+d.get('interest'));const body=encodeURIComponent('Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nPhone (optional): '+(d.get('phone')||'Not provided')+'\nInterest: '+d.get('interest')+'\n\nMessage:\n'+d.get('message'));const note=document.getElementById('formNote');note.textContent='Opening your email application with the enquiry prepared. Please press Send in your email app to submit it.';window.location.href='mailto:'+recipient+'?subject='+subject+'&body='+body;});}
+
+const toggle = document.querySelector('.menu-toggle');
+const links = document.querySelector('.nav-links');
+if (toggle && links) toggle.addEventListener('click', () => {
+  const open = links.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', String(open));
+});
+document.querySelectorAll('[data-enquiry-form]').forEach(form => {
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const name = (data.get('name') || '').toString().trim();
+    const email = (data.get('email') || '').toString().trim();
+    const interest = (data.get('interest') || 'General enquiry').toString().trim();
+    const message = (data.get('message') || '').toString().trim();
+    const phone = form.dataset.phone || '';
+    const text = `Englighter enquiry%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AInterested in: ${encodeURIComponent(interest)}%0AMessage: ${encodeURIComponent(message)}`;
+    window.open(`https://wa.me/${phone}?text=${text}`, '_blank', 'noopener');
+  });
+});
