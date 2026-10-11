@@ -1,17 +1,33 @@
-ENLIGHTER WEBSITE STARTER
-==========================
+ENLIGHTER WEBSITE — UPDATED STATIC VERSION
 
 Files
-- index.html: responsive one-page marketing website
-- privacy.html: draft privacy policy (must be reviewed before publishing)
+- index.html: Homepage
+- learning.html: Learning pathways and methodology
+- technology.html: High-level AI/assessment explanation
+- about.html: About Englighter and VQB Study Days Private Limited
+- partners.html: Partnership enquiry page
+- contact.html: Contact details and email-preparing form
+- privacy.html: Website privacy information; app-specific privacy still needs verification
+- styles.css, script.js: Shared styling and behavior
+- robots.txt, sitemap.xml: Basic search-engine discovery files
 
-Before launch
-1. Replace REPLACE-WITH-YOUR-OFFICIAL-EMAIL@example.com in index.html with your official enquiry email.
-2. Add your official phone/WhatsApp number, business address, app store links and social links if desired.
-3. Review all programme and partnership statements for accuracy.
-4. Review privacy.html and obtain appropriate legal/privacy review.
-5. Test on mobile and desktop.
+Publish to GitHub Pages
+1. Download and unzip this package.
+2. Open https://github.com/ashokenglighter/englighter-website
+3. Choose Add file > Upload files.
+4. Upload all files in this folder (not the folder itself) to the repository root.
+5. Commit changes to the main branch. GitHub Pages will redeploy automatically.
+6. Check https://englighter.com and test every navigation link on desktop and mobile.
 
-No WordPress subscription is required to use these static HTML files. They can be hosted on a suitable static hosting service. Your domain registration at Namecheap and your website hosting are separate things. Do not change DNS records until you know where you intend to host the website and have confirmed whether existing company email depends on the current DNS.
+Contact form behavior
+The form uses a mailto link to vqbstudydayspvtltd@gmail.com. It opens the visitor's email application and the visitor must press Send. It does not send submissions to a server. Test it with a device that has an email app configured. If a server-submitted form is required, select and configure a form service separately.
 
-The contact form opens the visitor's email application; it does not send form submissions to a server. A server-backed form can be added later if needed.
+Important review notes
+- The company name, public contact email, phone numbers and location were taken from the Elevate 2026 document provided for this work. Verify that they are current and intended for public display before publishing.
+- No directors' names, shareholding, grant budgets, pricing economics, or financial projections are included.
+- No app-store download button or unverified learner-result claims are included.
+- Review the privacy page against the actual deployed application and applicable requirements before treating it as a complete app privacy notice.
+- Website text describes the methodology document at a high level; confirm that each public statement still matches the current production build.
+- This package contains static website files only. It does not change your GitHub repository or DNS automatically.
+
+Public enquiry phone: +91 99800 54840 (click-to-call links are included).
